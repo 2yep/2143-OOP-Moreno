@@ -8,4 +8,4 @@ Kinda cool I guess.
 
 |   #   | File                     | Description                                     |
 | :---: | ------------------------ | ----------------------------------------------- |
-|   1   | [banner.cpp](banner.cpp) | text that goes boom on page with $$$$ and stuff |
+|   1   | [banner.cpp](./banner.cpp) | text that goes boom on page with $$$$ and stuff |
