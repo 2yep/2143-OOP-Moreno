@@ -6,9 +6,9 @@ This program implements a list data structure that links together nodes of integ
 
 ### Files
 
-|   #   | File                                                                                                                                        | Description                      |
-| :---: | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-|   1   | ***<a href="https://github.com/2yep/2143-OOP-Moreno/blob/dd567acf5196cd9468c2abba597305663efbdae6/Assignments/AO4/main.cpp">main.cpp</a>*** | Main driver of my list program . |
+|   #   | File                 | Description                      |
+| :---: | -------------------- | -------------------------------- |
+|   1   | [main.cpp](main.cpp) | Main driver of my list program . |
 
 
 ### Instructions
