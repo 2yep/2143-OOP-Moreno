@@ -10,6 +10,7 @@ Creating a class that utilizes more functions and quality of life overloads to m
 | :---: | ------------------ | ------------------------------------------- |
 |   1   | [main](main.cpp)   | utlizing commands from [myVec](myVec.hpp) . |
 |   1   | [myVec](myVec.hpp) | class implementation and commands.          |
+|   1   | [output](test.out) | output.                                     |
 
 
 ### Instructions
