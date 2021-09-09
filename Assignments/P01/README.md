@@ -1,8 +1,8 @@
-## A04 - Commenting Code
+## P01 - MyVector Class
 ### Miklos Moreno
 ### Description:
 
-This program implements a list data structure that links together nodes of integers. It does more stuff, but we don't need to write that here.
+Creating a class that utilizes more functions and quality of life overloads to make a more robust class.
 
 ### Files
 
@@ -14,8 +14,16 @@ This program implements a list data structure that links together nodes of integ
 
 ### Instructions
 
-- This program does not require any non standard libraries
+- Run it lol
 
 ### Example Command
 
-- None for now.
+- Commands used in .hpp include
+  - pushFront
+  - pushRear
+  - pushAt
+  - inOrderPush
+  - popFront
+  - popRear
+  - popAt
+  - find
