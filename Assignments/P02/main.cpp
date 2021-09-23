@@ -1,22 +1,21 @@
 /*****************************************************************************
 *                    
-*  Author:           Griffin
-*  Title:            Singly linked list vector implementation
+*  Author:           Miklos Moreno
+*  Title:            Overloaded Operators
 *  Course:           2143
 *  Semester:         Fall 2021
 * 
 *  Description:
-*        Uses a singly linked list as the backend for an STL like "vector" 
-*        class definition.
+*        Use previously made MyVector class (this one is Griffins, it looks prettier).
+*        Implemented overloaded operators (+, -, =, *, /, [], ostream, fstream).
 *   
-*  NO ERROR DETECTION USED. SO RETURNING 'TRUE' FOR A SUCCESFUL PUSH ONTO LIST
-*  IS NOT FULLY ACCURATE AS WE ARE NOT INCLUDING ANY "TRY" "CATCH" BLOCKS TO CAPTURE
-*  ERRORS CORRECTLY. WE WILL COVER THESE LATER.
+* 
 * 
 *  Usage:
 *        Use it like a linked list now. More like a vector next program
+*                                                (this is that program)
 * 
-*  Files: TBD
+*  Files: output.txt
 *****************************************************************************/
 #include <fstream>
 #include <iostream>
@@ -407,6 +406,13 @@ public:
         return true;
     }
 
+    /**
+     * @brief Write LL values to console using "<<"
+     * 
+     * @param ostream - need access to cout
+     * @param MyVector - LL that will be printed to console 
+     * @return ostream - give cout back 
+     */
     friend ostream &operator<<(ostream &os, const MyVector &rhs)
     {
         Node *temp = rhs.head; // temp pointer copies head
@@ -426,6 +432,14 @@ public:
 
         return os;
     }
+
+    /**
+     * @brief Write LL values to outfile using "<<"
+     * 
+     * @param fstream - need access to fstream
+     * @param MyVector - LL that will be printed to file 
+     * @return ostream - give fstream back 
+     */
     friend fstream &operator<<(fstream &os, const MyVector &rhs)
     {
         Node *temp = rhs.head; // temp pointer copies head
@@ -446,6 +460,11 @@ public:
         return os;
     }
 
+    /**
+     * @brief traverses LL like an array
+     * 
+     * @param index - num of times to loop LL
+     */
     int &operator[](int index)
     {
         if (index < 0 || index >= size)
@@ -463,6 +482,12 @@ public:
         }
     }
 
+    /**
+     * @brief sets this equal to other
+     * 
+     * @param MyVector - LL on right side of operator  
+     * @return MyVector - sets new LL to values of rhs
+     */
     MyVector &operator=(const MyVector &rhs)
     {
         if (this == &rhs)
@@ -476,6 +501,12 @@ public:
         return *this;
     }
 
+    /**
+     * @brief Checks if two LL are equal
+     * 
+     * @param MyVector - compared to this for equality 
+     * @return bool - T or F
+     */
     bool operator==(const MyVector &rhs)
     {
         MyVector other = rhs;
@@ -492,6 +523,13 @@ public:
         }
     }
 
+    /**
+     * @brief destructive operator that adds rhs values to this
+     *        difference in size means nodes that did not change 
+     * 
+     * @param MyVector - values being added 
+     * @return MyVector - returns LL after operator finishes 
+     */
     MyVector &operator+=(const MyVector &rhs)
     {
         MyVector other = rhs;
@@ -515,6 +553,13 @@ public:
         return *this;
     }
 
+    /**
+     * @brief destructive operator that subtracts rhs values to this
+     *        difference in size means nodes that did not change 
+     * 
+     * @param MyVector - values being subtracted
+     * @return MyVector - returns LL after operator finishes 
+     */
     MyVector &operator-=(const MyVector &rhs)
     {
         MyVector other = rhs;
@@ -538,6 +583,13 @@ public:
         return *this;
     }
 
+    /**
+     * @brief destructive operator that multiplies rhs values to this
+     *        difference in size means nodes that did not change  
+     * 
+     * @param MyVector - values being multiplied
+     * @return MyVector - returns LL after operator finishes 
+     */
     MyVector &operator*=(const MyVector &rhs)
     {
         MyVector other = rhs;
@@ -561,6 +613,13 @@ public:
         return *this;
     }
 
+    /**
+     * @brief destructive operator that divides rhs values to this
+     *        difference in size means nodes that did not change  
+     * 
+     * @param MyVector - values divinding this
+     * @return MyVector - returns LL after operator finishes 
+     */
     MyVector &operator/=(const MyVector &rhs)
     {
         MyVector other = rhs;
