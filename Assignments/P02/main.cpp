@@ -470,6 +470,7 @@ public:
         if (index < 0 || index >= size)
         {
             cout << "invalid index" << endl;
+            exit(0);
         }
         else
         {
@@ -509,18 +510,20 @@ public:
      */
     bool operator==(const MyVector &rhs)
     {
+        bool returnthis;
         MyVector other = rhs;
         if (this->size != other.size)
         {
-            return false;
+            returnthis = false;
         }
         else
         {
             for (int i = 0; i < size; i++)
             {
-                return (*this)[i] == other[i];
+                returnthis = (*this)[i] == other[i];
             }
         }
+        return returnthis;
     }
 
     /**
