@@ -7,3 +7,4 @@
 |  03   | [P01](P01/README.md)   | Larger, more robust class example .               |
 |  04   | [P02](P02/README.md)   | P01 with overloaded operators.                    |
 |  05   | [P03A](P03A/README.md) | RPSLS with emojis.                                |
+|  06   | [P03b](P03B/README.md) | BolNiverse Fight Club pt. 2.                      |
